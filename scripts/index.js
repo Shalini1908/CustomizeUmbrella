@@ -45,7 +45,8 @@ display_image.src = "../images/Blue umbrella.png"
 let upload_svg = document.querySelector("#change_color");
 upload_svg.src = "../images/upload_icon.svg"
 
-let buton = document.querySelector(".upload_logo");
+let button = document.querySelector(".upload_logo");
+
 let logoImage = undefined;
 let logoIsUploading = false;
 
@@ -62,7 +63,7 @@ const convertBase64 = (file) => {
     });
 };
 
-buton.addEventListener("change", (e) => {
+button.addEventListener("change", (e) => {
     let file = e.target.files[0];
 
     logoIsUploading = true;
@@ -72,6 +73,7 @@ buton.addEventListener("change", (e) => {
     img.setAttribute('class', 'loader_image');
     upload_svg.setAttribute("src", "../images/loader_icon.svg");
     upload_svg.setAttribute('class', 'upload_icon');
+ 
     setTimeout(async () => {
         try {
             let base64File = await convertBase64(file);
