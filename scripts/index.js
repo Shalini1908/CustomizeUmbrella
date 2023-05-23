@@ -1,4 +1,4 @@
-// put JavaScript here...
+
 let changeObj = {
     blue: {
         umbrellaSrc: "../images/Blue umbrella.png",
